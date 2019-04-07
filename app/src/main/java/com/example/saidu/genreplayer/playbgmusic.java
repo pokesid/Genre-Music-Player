@@ -25,6 +25,12 @@ import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
 /**
  * Created by saidu on 26-Aug-18.
  */
@@ -316,7 +322,9 @@ public static void playnextsong()
         mDatabaseHelper.droptemptable();
        // mDatabaseHelper.createtemptable();
 
-
+        List<String> low_priority = new ArrayList<>();
+        List<String> med_priority = new ArrayList<>();
+        List<String> high_priority = new ArrayList<>();
         String s[]=genre.split(",");
 
         for(int i=0;i<s.length;i++)
@@ -330,18 +338,115 @@ public static void playnextsong()
                 String c= data2.getString(2);
                 String d= data2.getString(3);
                 String e= data2.getString(4);
-                String f= data2.getString(4);
-                boolean insertdata = mDatabaseHelper.adddata2(a,b,c,d,e,f);
+                String f= data2.getString(5);
+                String g= data2.getString(6);
+
+                if(g.equals("1"))
+                {
+                    low_priority.add(a+";;"+b+";;"+c+";;"+d+";;"+e+";;"+f+";;"+g);
+
+                }
+                else if(g.equals("2"))
+                {
+                    med_priority.add(a+";;"+b+";;"+c+";;"+d+";;"+e+";;"+f+";;"+g);
+                }
+                else if(g.equals("3"))
+                {
+                    high_priority.add(a+";;"+b+";;"+c+";;"+d+";;"+e+";;"+f+";;"+g);
+                }
+
+
+
+            }
+        }
+
+       Map<Integer, String> hp2= new TreeMap<>();
+        Map<Integer, String> mp2= new TreeMap<>();
+        Map<Integer, String> lp2= new TreeMap<>();
+
+
+        for(String h:high_priority)
+        {
+            String split[]=h.split(";;");
+            hp2.put(Integer.parseInt(split[5]),h);
+        }
+
+        for(String h:med_priority)
+        {
+            String split[]=h.split(";;");
+            mp2.put(Integer.parseInt(split[5]),h);
+
+        }
+
+        for(String h:low_priority)
+        {
+            String split[]=h.split(";;");
+            lp2.put(Integer.parseInt(split[5]),h);
+
+        }
+
+
+        TreeMap<Integer,String> hp = new TreeMap<>(Collections.reverseOrder());
+        hp.putAll(hp2);
+        TreeMap<Integer,String> mp = new TreeMap<>(Collections.reverseOrder());
+        mp.putAll(mp2);
+        TreeMap<Integer,String> lp = new TreeMap<>(Collections.reverseOrder());
+        lp.putAll(lp2);
+
+
+
+        if(hp.size()>0)
+        {
+            for(Map.Entry<Integer,String > each_line : hp.entrySet())
+            {
+                Log.d("lol", each_line.getValue());
+                String e[]=each_line.getValue().split(";;");
+                boolean insertdata = mDatabaseHelper.adddata2(e[0],e[1],e[2],e[3],e[4],e[5],e[6]);
                 if (insertdata) {
                     // Toast.makeText(getApplicationContext(), "vetrii", Toast.LENGTH_SHORT).show();
                     Log.e("lol", "success");
                 } else {
                     Log.e("lol", "fail");
                 }
-
-
             }
+
         }
+
+        if(mp.size()>0)
+        {
+            for(Map.Entry<Integer,String > each_line : mp.entrySet())
+            {
+                Log.d("lol", each_line.getValue());
+                String e[]=each_line.getValue().split(";;");
+                boolean insertdata = mDatabaseHelper.adddata2(e[0],e[1],e[2],e[3],e[4],e[5],e[6]);
+                if (insertdata) {
+                    // Toast.makeText(getApplicationContext(), "vetrii", Toast.LENGTH_SHORT).show();
+                    Log.e("lol", "success");
+                } else {
+                    Log.e("lol", "fail");
+                }
+            }
+
+        }
+        if(lp.size()>0)
+        {
+            for(Map.Entry<Integer,String > each_line : lp.entrySet())
+            {
+
+                Log.d("lol", each_line.getValue());
+                String e[]=each_line.getValue().split(";;");
+                boolean insertdata = mDatabaseHelper.adddata2(e[0],e[1],e[2],e[3],e[4],e[5],e[6]);
+                if (insertdata) {
+                    // Toast.makeText(getApplicationContext(), "vetrii", Toast.LENGTH_SHORT).show();
+                    Log.e("lol", "success");
+                } else {
+                    Log.e("lol", "fail");
+                }
+            }
+
+        }
+
+
     }
 
 public static void getsongnamesinger()
@@ -371,6 +476,8 @@ public static void getsongnamesinger()
         String songname=data2.getString(0);
         String songsinger=data2.getString(2);
         String genres=data2.getString(4);
+        String no_of_times_played=data2.getString(5);
+        String priority2=data2.getString(6);
 
 
         if(genres.length()>0)
@@ -380,6 +487,8 @@ public static void getsongnamesinger()
         musicplayer.displaygenre.setText(genres);
         musicplayer.sngname.setText(songname);
         musicplayer.sngsinger.setText(songsinger);
+        musicplayer.songcount.setText(no_of_times_played+" - "+priority2);
+       // mDatabaseHelper.update_count(songname);
         MainActivity.textsongname.setText(songname);
     }
     else

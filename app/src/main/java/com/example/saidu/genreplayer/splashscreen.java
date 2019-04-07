@@ -24,13 +24,19 @@ public class splashscreen extends AppCompatActivity {
     DatabaseHelper mDatabaseHelper;
     public static final int MY_PERMISSION_REQUEST=1;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
-        ivsplash = (ImageView) findViewById(R.id.ivsplash);
-        tvsplash = (TextView) findViewById(R.id.tvsplash);
 
+        ivsplash = (ImageView) findViewById(R.id.ivsplash);//imageView
+        tvsplash = (TextView) findViewById(R.id.tvsplash);//textView
+
+        //Mysql db
         mDatabaseHelper=new DatabaseHelper(this);
+
+
+    //Read Storage Permission
         if(ContextCompat.checkSelfPermission(splashscreen.this, Manifest.permission.READ_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED)
         {
             if(ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.READ_EXTERNAL_STORAGE))
@@ -53,24 +59,8 @@ public class splashscreen extends AppCompatActivity {
         Animation myanim = AnimationUtils.loadAnimation(this, R.anim.mytransition);
         tvsplash.startAnimation(myanim);
         ivsplash.startAnimation(myanim);
-        final Intent i = new Intent(this, MainActivity.class);
 
-       /* Thread timer = new Thread() {
 
-            @Override
-            public void run() {
-                try {
-                    sleep(2000);
-                } catch (InterruptedException e) {
-
-                } finally {
-  startActivity(i);
-                    overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
-                    finish();
-                }
-            }
-        };
-        timer.start();*/
     }
     public void dostuff()
     {

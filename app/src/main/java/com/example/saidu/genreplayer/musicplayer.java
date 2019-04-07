@@ -24,6 +24,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.RemoteViews;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -48,7 +49,7 @@ public class musicplayer extends AppCompatActivity {
     DatabaseHelper mDatabaseHelper;
     Handler handler;
     Runnable runnable;
-    public static TextView t1,t2,sngname,sngsinger,displaygenre;
+    public static TextView t1,t2,sngname,sngsinger,displaygenre,songcount;
     public static int pgss;
     static  musicplayer mpp;
     public static String songstate="playing";
@@ -58,6 +59,7 @@ public class musicplayer extends AppCompatActivity {
     //public static ImageView album_art ;
     public static CircleImageView album_art;
     public String kk1,kk2,kk3,kk4,kk5,kk6,kk7,kk8;
+    RadioButton rb1,rb2,rb3;
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -68,6 +70,7 @@ public class musicplayer extends AppCompatActivity {
         t2=(TextView)findViewById(R.id.timeend);
         sngname=(TextView)findViewById(R.id.sngname);
         sngsinger=(TextView)findViewById(R.id.sngsinger);
+        songcount=(TextView)findViewById(R.id.songcount);
         displaygenre=(TextView)findViewById(R.id.displaygenre);
         porp=(Button)findViewById(R.id.playorpause);
         viewgenre=(Button)findViewById(R.id.viewgenrebut);
@@ -78,6 +81,7 @@ public class musicplayer extends AppCompatActivity {
         mp=musicplayer.this;
         mpp=this;
         mDatabaseHelper=new DatabaseHelper(this);
+
         //notification part
    //     playnotif();
         viewgenre.setOnClickListener(new View.OnClickListener() {
@@ -477,6 +481,21 @@ public class musicplayer extends AppCompatActivity {
                                  }
                                  String s2 = (playbgmusic.player.getCurrentPosition() / 1000 / 60) + ":" + sai;
                                  t1.setText(s2);
+                                 if((playbgmusic.player.getDuration()/1000/60.0)>0.5)
+                                 {
+                                    if(playbgmusic.player.getCurrentPosition()/ 1000 / 60.0==0.5)
+                                    {
+
+                                        mDatabaseHelper.update_count(sngname.getText().toString());
+                                    }
+                                 }
+                                 else
+                                 {
+                                     mDatabaseHelper.update_count(sngname.getText().toString());
+                                 }
+
+
+                               //  if((playbgmusic.player.getDuration()/1000/60));
                              }
                          });
 
@@ -722,10 +741,108 @@ public  void playnotif()
 
     }
 
-    public static void gfgdffg()
-    {
 
+    public void settings(View view) {
+
+        AlertDialog.Builder mBuilder=new AlertDialog.Builder(musicplayer.this);
+
+        View mView= getLayoutInflater().inflate(R.layout.prioritydialog,null);
+        TextView txtMessage = (TextView) mView.findViewById(R.id.songname_tv);
+        TextView song_genre = (TextView) mView.findViewById(R.id.song_genre);
+        TextView song_timesplayed = (TextView) mView.findViewById(R.id.song_timesplayed);
+         rb1=(RadioButton)mView.findViewById(R.id.radioButton);
+         rb2=(RadioButton)mView.findViewById(R.id.radioButton2);
+         rb3=(RadioButton)mView.findViewById(R.id.radioButton3);
+        Button but_confirm=(Button)mView.findViewById(R.id.but_confirm);
+        Button but_reset=(Button)mView.findViewById(R.id.but_reset);
+
+
+        rb1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                    rb2.setChecked(false);
+                    rb3.setChecked(false);
+
+            }
+         });
+
+        rb2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v1) {
+                rb1.setChecked(false);
+                rb3.setChecked(false);
+
+            }
+        });
+
+        rb3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v2) {
+                rb1.setChecked(false);
+                rb2.setChecked(false);
+
+            }
+        });
+
+
+
+
+        mBuilder.setView(mView);
+        final AlertDialog dialog=mBuilder.create();
+
+        Cursor data2=mDatabaseHelper.getsongdetails(sngname.getText().toString());
+        if(data2.moveToNext())
+        {
+            txtMessage.setText(data2.getString(0));
+            song_genre.setText(data2.getString(4));
+            song_timesplayed.setText(data2.getString(5));
+            int priority_song=Integer.parseInt(data2.getString(6));
+            switch(priority_song)
+            {
+                case 1:
+                    rb1.setChecked(true);
+                    break;
+                case 2:
+                    rb2.setChecked(true);
+                    break;
+                case 3:
+                    rb3.setChecked(true);
+                    break;
+                default:
+
+            }
+
+        }
+        dialog.show();
+
+        //1-high,2-med,3-low
+        but_confirm.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if(rb1.isChecked())
+                {
+                    mDatabaseHelper.update_table(sngname.getText().toString(),1);
+                }
+                else if(rb2.isChecked())
+                {
+                    mDatabaseHelper.update_table(sngname.getText().toString(),2);
+                }
+                else if(rb3.isChecked())
+                {
+                    mDatabaseHelper.update_table(sngname.getText().toString(),3);
+                }
+
+        dialog.dismiss();
+            }
+        });
+
+
+        but_reset.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                rb2.setChecked(true);
+                rb1.setChecked(false);
+                rb3.setChecked(false);
+
+
+
+            }
+        });
     }
-
-
 }

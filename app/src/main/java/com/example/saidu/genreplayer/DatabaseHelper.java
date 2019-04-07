@@ -24,9 +24,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createtable="CREATE TABLE all_songs(songname text primary key,songlocation text,singer text,genreselected text,genre text,timesplayed integer)";
+        String createtable="CREATE TABLE all_songs(songname text primary key,songlocation text,singer text,genreselected text,genre text,timesplayed integer,priority integer DEFAULT 2)";
         db.execSQL(createtable);
-        String createtable2="CREATE TABLE temp_playlist(songname text primary key,songlocation text,singer text,genreselected text,genre text,timesplayed integer)";
+        String createtable2="CREATE TABLE temp_playlist(songname text primary key,songlocation text,singer text,genreselected text,genre text,timesplayed integer,priority integer DEFAULT 2)";
         db.execSQL(createtable2);
     }
 
@@ -47,11 +47,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public void createtemptable()
-    {SQLiteDatabase db = this.getWritableDatabase();
-        String createtable2="CREATE TABLE temp_playlist(songname text primary key,songlocation text,singer text,genreselected text,genre text,timesplayed integer)";
-        db.execSQL(createtable2);
-    }
+
 
 
     long result;
@@ -129,6 +125,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String query2="update all_songs set genreselected='yes' where songlocation like \"%"+path+"%\"";
         db.execSQL(query2);
     }
+
+
     public Cursor getgenreplaylist2(String genre) {
         SQLiteDatabase db=this.getWritableDatabase();
         String query="Select * from all_songs where genre like \"%"+genre+"%\"";
@@ -136,8 +134,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return  data;
     }
+
+
+    public Cursor getsongdetails(String song_name)
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        String query="Select * from all_songs where songname like \"%"+song_name+"%\"";
+        Cursor data=db.rawQuery(query,null);
+
+        return  data;
+    }
+
     long result2;
-    public boolean adddata2(String a,String b,String c,String d,String e,String f)
+    public boolean adddata2(String a,String b,String c,String d,String e,String f,String g)
     {
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -148,11 +157,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("genreselected", d);
         contentValues.put("genre", e);
         contentValues.put("timesplayed", f);
+        contentValues.put("priority", g);
 
 
       Log.e(TAG, a);
         try {
             result2 = db.insert("temp_playlist", null, contentValues);
+
+
+
+
+
         }catch (SQLiteConstraintException ignore)
         {
 
@@ -164,4 +179,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
     }
+
+    public void update_count(String song_name)
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        String query="update all_songs set timesplayed=timesplayed+1 where songname like \"%"+song_name+"%\"";
+        db.execSQL(query);
+
+    }
+
+    public void update_table(String song_name,int i)
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        String query="update all_songs set priority="+i+" where songname like \"%"+song_name+"%\"";
+        db.execSQL(query);
+    }
+
 }

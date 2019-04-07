@@ -2,7 +2,6 @@ package com.example.saidu.genreplayer;
 
 import android.Manifest;
 import android.app.ActivityManager;
-import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -89,8 +88,8 @@ public  static Button btnporp;
 
     public void checkplayornot()
     {
-        boolean abc= isMyServiceRunning(playbgmusic.class);
-        if(abc==true) {
+        boolean is_running= isMyServiceRunning(playbgmusic.class);
+        if(is_running==true) {
             playbgmusic.getsongnamesinger2();
             if (playbgmusic.player.isPlaying()) {
                 btnporp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
@@ -329,20 +328,25 @@ catch (Exception e)
     }
 
     public void playprevioussong2(View view) {
-      /*  boolean abc= isMyServiceRunning(playbgmusic.class);
-        if(abc==true) {
-            playbgmusic.player.stop();
-            musicplayer.songstate = "playing";
-            musicplayer.porp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
-            playbgmusic.playprevioussong();
-        }*/
-        AlertDialog.Builder mBuilder=new AlertDialog.Builder(MainActivity.this);
+
+      /*  AlertDialog.Builder mBuilder=new AlertDialog.Builder(MainActivity.this);
 
         View mView= getLayoutInflater().inflate(R.layout.prioritydialog,null);
         mBuilder.setView(mView);
         final AlertDialog dialog=mBuilder.create();
 
-        dialog.show();
+        dialog.show();*/
+
+        boolean abc= isMyServiceRunning(playbgmusic.class);
+        if(abc==true) {
+
+            playbgmusic.player.stop();
+            musicplayer.songstate="playing";
+            musicplayer.porp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
+            playbgmusic.playprevioussong();
+        }
+
+
     }
 
     public static void gotosong(String songnamedaw)
@@ -398,5 +402,6 @@ catch (Exception e)
 
 
     }
+
 
 }
