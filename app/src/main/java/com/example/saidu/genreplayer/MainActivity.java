@@ -1,6 +1,7 @@
 package com.example.saidu.genreplayer;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -266,50 +267,59 @@ catch (Exception e)
 
     public void gotoplayer(View view) {
 
-            onBackPressed();
-        boolean abc= isMyServiceRunning(playbgmusic.class);
-        if(abc==true) {
-            if (playbgmusic.player.isPlaying()) {
 
-
-            } else {
-                musicplayer.songstate="paused";
-                musicplayer.porp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
-            }
-        }
-        else
+        if(isTaskRoot())
         {
 
         }
+        else {
+            onBackPressed();
+            boolean abc = isMyServiceRunning(playbgmusic.class);
+            if (abc == true) {
+                if (playbgmusic.player.isPlaying()) {
 
+
+                } else {
+                    musicplayer.songstate = "paused";
+                    musicplayer.porp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
+                }
+            } else {
+
+            }
+        }
     }
 
     public void playorpausesong(View view) {
+        try {
+            boolean abc = isMyServiceRunning(playbgmusic.class);
+            if (abc == true) {
+                if (playbgmusic.player.isPlaying()) {
 
-        boolean abc= isMyServiceRunning(playbgmusic.class);
-        if(abc==true) {
-            if (playbgmusic.player.isPlaying()) {
+                    musicplayer.songstate = "paused";
+                    musicplayer.porp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
+                    playbgmusic.notificationplay(MainActivity.this);
 
-                musicplayer.songstate="paused";
-                musicplayer.porp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
-                playbgmusic.notificationplay(MainActivity.this);
 
-                playbgmusic.player.pause();
+                    playbgmusic.player.pause();
                     btnporp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
+
+
+                } else {
+                    playbgmusic.player.start();
+
+                    musicplayer.songstate = "playing";
+                    musicplayer.porp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
+                    playbgmusic.notificationpause(MainActivity.this);
+
+                    btnporp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
+                }
             } else {
-                playbgmusic.player.start();
 
-                musicplayer.songstate="playing";
-                musicplayer.porp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
-                playbgmusic.notificationpause(MainActivity.this);
-
-                btnporp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
             }
-        }
-        else
-        {
+        } catch (Exception e) {
 
         }
+
     }
 
     public void playnextsong2(View view) {
@@ -353,8 +363,7 @@ catch (Exception e)
     {
 
 
-        Intent intent = new Intent(ctxx, musicplayer
-                .class);
+        Intent intent = new Intent(ctxx, musicplayer.class);
 
 
         String myitem = songnamedaw;
@@ -392,6 +401,10 @@ catch (Exception e)
                 }
 
                 ctxx.startActivity(intent);
+
+                    ((Activity) ctxx).overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+
+
             }
         }
 

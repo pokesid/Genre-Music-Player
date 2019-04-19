@@ -8,10 +8,10 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
-import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
@@ -29,6 +29,8 @@ import android.widget.RemoteViews;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -60,6 +62,7 @@ public class musicplayer extends AppCompatActivity {
     public static CircleImageView album_art;
     public String kk1,kk2,kk3,kk4,kk5,kk6,kk7,kk8;
     RadioButton rb1,rb2,rb3;
+    ArrayList<String> playlist;
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -256,8 +259,8 @@ public class musicplayer extends AppCompatActivity {
                 alternative.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        ColorDrawable buttonColor = (ColorDrawable) alternative.getBackground();
-                        int colorId = buttonColor.getColor();
+                       // ColorDrawable buttonColor = (ColorDrawable) alternative.getBackground();
+                      //  int colorId = buttonColor.getColor();
                         if (kk4.equals("yes")) {kk4="no";
                             alternative.setBackground(ContextCompat.getDrawable(musicplayer.this, R.drawable.buttonbg));
                         }
@@ -469,6 +472,8 @@ public class musicplayer extends AppCompatActivity {
                          mp.runOnUiThread(new Runnable() {
                              @Override
                              public void run() {
+
+                                 Log.e("thread1","running");
                                  int a=playbgmusic.player.getCurrentPosition() / 1000 % 60;
                          String sai="";
                                  if(a<10)
@@ -632,6 +637,7 @@ public class musicplayer extends AppCompatActivity {
 
            playbgmusic.notificationplay(musicplayer.this);
 
+
        }
       else if(songstate.equals("paused"))
         {
@@ -640,6 +646,7 @@ public class musicplayer extends AppCompatActivity {
             songstate="playing";
             porp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
             playbgmusic.notificationpause(musicplayer.this);
+
         }
 
 
@@ -844,5 +851,41 @@ public  void playnotif()
 
             }
         });
+    }
+
+    public void playlist(View view) {
+
+        playlist=new ArrayList<String>();//Creating arraylist
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Playlist");
+        Cursor data22=mDatabaseHelper.getallsong();
+        while(data22.moveToNext())
+        {
+
+            String songname22=data22.getString(0);
+            String timez=data22.getString(5);
+            playlist.add(songname22);
+            //+" ("+timez+" time(s))"
+            Log.e("gg",songname22);
+
+
+        }
+
+        String[] animals = playlist.toArray(new String[0]);
+        builder.setItems(animals, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                playbgmusic.playplaylistsong(playlist.get(which));
+                     //   MainActivity.gotosong(playlist.get(which));
+
+
+            }
+        });
+
+// create and show the alert dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }

@@ -29,8 +29,8 @@ public class splashscreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
 
-        ivsplash = (ImageView) findViewById(R.id.ivsplash);//imageView
-        tvsplash = (TextView) findViewById(R.id.tvsplash);//textView
+        //ivsplash = (ImageView) findViewById(R.id.ivsplash);//imageView
+       // tvsplash = (TextView) findViewById(R.id.tvsplash);//textView
 
         //Mysql db
         mDatabaseHelper=new DatabaseHelper(this);
@@ -57,13 +57,17 @@ public class splashscreen extends AppCompatActivity {
 
 
         Animation myanim = AnimationUtils.loadAnimation(this, R.anim.mytransition);
-        tvsplash.startAnimation(myanim);
-        ivsplash.startAnimation(myanim);
+        //tvsplash.startAnimation(myanim);
+       // ivsplash.startAnimation(myanim);
 
 
     }
     public void dostuff()
     {
+
+        Animation myanim = AnimationUtils.loadAnimation(this, R.anim.mytransition);
+       // tvsplash.startAnimation(myanim);
+       // ivsplash.startAnimation(myanim);
         ContentResolver contentResolver=getContentResolver();
         Uri songUri= MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
         Cursor songCursor=contentResolver.query(songUri,null,null,null,null);

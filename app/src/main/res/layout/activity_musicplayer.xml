@@ -11,9 +11,9 @@
         android:id="@+id/seekBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/viewgenrebut"
-        android:layout_marginTop="26dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/button3"
+        android:layout_marginBottom="81dp" />
 
     <Button
         android:id="@+id/playorpause"
@@ -23,6 +23,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dp"
 
+        android:layout_marginTop="2dp"
         android:background="@drawable/ic_pause_circle_outline_white"
         android:onClick="notif" />
 
@@ -51,10 +52,10 @@
         android:layout_height="35dp"
         android:layout_alignTop="@+id/playorpause"
         android:layout_marginStart="27dp"
+        android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/playorpause"
         android:background="@drawable/ic_skip_next_white"
-        android:onClick="playnextsong"
-         />
+        android:onClick="playnextsong" />
 
     <Button
         android:id="@+id/button2"
@@ -62,9 +63,10 @@
         android:layout_height="35dp"
         android:layout_alignTop="@+id/playorpause"
         android:layout_marginEnd="19dp"
+        android:layout_marginTop="2dp"
         android:layout_toStartOf="@+id/playorpause"
-        android:onClick="playprevioussong"
-        android:background="@drawable/ic_skip_previous_white" />
+        android:background="@drawable/ic_skip_previous_white"
+        android:onClick="playprevioussong" />
 
     <TextView
         android:id="@+id/sngname"
@@ -93,25 +95,21 @@
         android:id="@+id/displaygenre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/sngsinger"
+        android:layout_above="@+id/viewgenrebut"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:text="display genre"
         android:gravity="center_vertical"
+        android:text="display genre"
         android:textColor="#fff"
         android:textSize="20sp" />
 
     <Button
         android:id="@+id/viewgenrebut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/displaygenre"
-        android:layout_alignBottom="@+id/displaygenre"
-        android:layout_marginStart="11dp"
-        android:layout_toEndOf="@+id/button"
-        android:textColor="#fff"
-        android:background="@drawable/buttonbgg"
-        android:text="Change genre" />
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/timestart"
+        android:layout_alignEnd="@+id/songcount"
+        android:background="@drawable/genre"
+        android:textColor="#fff" />
 
 
     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -120,7 +118,7 @@
         android:layout_height="225dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="74dp"
         android:src="@drawable/mpbackground"
         app:civ_border_color="#767474"
         app:civ_border_width="5dp"
@@ -130,18 +128,30 @@
 
     <TextView
         android:id="@+id/songcount"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/timestart"
         android:layout_below="@+id/sngsinger" />
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/song_image"
-        android:text="set"
-        android:onClick="settings"/>
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/timeend"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/setings"
+        android:onClick="settings"
+        android:paddingTop="10dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignStart="@+id/timestart"
+        android:layout_below="@+id/timestart"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/plist"
+        android:onClick="playlist" />
 </RelativeLayout>

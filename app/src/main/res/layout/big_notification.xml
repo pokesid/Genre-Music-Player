@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,10 +9,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
+
         <ImageView
+            android:id="@+id/sngimage"
             android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/music_placeholder"/>
+            android:layout_height="84dp"
+            android:src="@mipmap/ic_launcher" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,9 +27,9 @@
     android:orientation="horizontal">
 
     <TextView
+        android:id="@+id/textsongname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textsongname"
         android:layout_weight="1"
         android:gravity="center"
         android:textColor="#fff"

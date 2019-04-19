@@ -49,6 +49,7 @@ public class NotificationBroadcast extends BroadcastReceiver {
             if(playbgmusic.player.isPlaying()){
                 playbgmusic.player.pause();
                 musicplayer.porp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
+                MainActivity.btnporp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
                 musicplayer.songstate="paused";
             }
           //  Toast.makeText(context,"delete",Toast.LENGTH_SHORT).show();

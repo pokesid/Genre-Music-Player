@@ -49,6 +49,8 @@ public class playbgmusic extends Service {
     int timess;
     static Context context;
    public static  Thread threadinga;
+
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -161,35 +163,7 @@ public static void playnextsong()
         ggwp();
     }catch (CursorIndexOutOfBoundsException e)
     {
-      /*  data2.moveToFirst();
 
-        String nextsongpath=data2.getString(1);
-        paths2=nextsongpath;
-        if(nextsongpath.contains("/storage/emulated/0"))
-        {
-            nextsongpath=nextsongpath.substring(nextsongpath.indexOf("/storage/emulated/0")+19);
-        }
-        paths=nextsongpath;
-        player = MediaPlayer.create(context, Uri.parse(Environment.getExternalStorageDirectory().getPath() +nextsongpath));
-        musicplayer.seekBar.setMax(player.getDuration());
-        getsongnamesinger();
-        String s=(player.getDuration()/1000/60)+":"+(player.getDuration()/1000%60);
-        musicplayer.t2.setText(s);
-        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mediaPlayer) {
-                Log.e("gg","Song over");
-                playnextsong();
-
-
-
-            }
-        });
-
-        player.start();
-        notificationpause(context);
-        ggwp();*/
-      //  Log.e("exception","You have reached the end");
         musicplayer.seekBar.setProgress(player.getDuration());
         Toast.makeText(context, "You have reached the end of the current genre song list", Toast.LENGTH_LONG).show();
         musicplayer.closeapp();
@@ -448,6 +422,24 @@ public static void playnextsong()
 
 
     }
+    public static Bitmap getnotifimage() {
+        try {
+            MediaMetadataRetriever metaRetriver = new MediaMetadataRetriever();
+            metaRetriver.setDataSource(paths2);
+
+            byte[] art = metaRetriver.getEmbeddedPicture();
+            Bitmap songImage = BitmapFactory.decodeByteArray(art, 0, art.length);
+            return songImage;
+
+
+        } catch (Exception e) {
+
+            Bitmap noimage = BitmapFactory.decodeResource( context.getResources(), R.drawable.background);
+            return noimage;
+
+
+        }
+    }
 
 public static void getsongnamesinger()
 {
@@ -561,7 +553,7 @@ try {
             try {
                 while (true) {
                     sleep(1000);
-
+                    Log.e("thread2","running");
                     musicplayer.pgss = player.getCurrentPosition();
                     musicplayer.seekBar.setProgress(player.getCurrentPosition());
                //     String s2 = (player.getCurrentPosition() / 1000 / 60) + ":" + (player.getCurrentPosition() / 1000 % 60);
@@ -612,6 +604,10 @@ try {
         mBuilder.setAutoCancel(true);
         mBuilder.setOngoing(true);
         mBuilder.getBigContentView().setTextViewText(R.id.textsongname,getsongname());
+        Bitmap bmap=getnotifimage();
+
+        mBuilder.getBigContentView().setImageViewBitmap(R.id.sngimage,bmap);
+        mBuilder.getBigContentView().setTextViewText(R.id.textsongname,getsongname());
         mBuilder.setSound(null);
         mBuilder.setSmallIcon(R.mipmap.ic_launcher_round);
         mBuilder.setVibrate(null);
@@ -656,6 +652,9 @@ try {
         mBuilder.setAutoCancel(true);
         mBuilder.setOngoing(true);
         mBuilder.getBigContentView().setTextViewText(R.id.textsongname,getsongname());
+        Bitmap bmap=getnotifimage();
+
+        mBuilder.getBigContentView().setImageViewBitmap(R.id.sngimage,bmap);
         mBuilder.setSound(null);
         mBuilder.setSmallIcon(R.mipmap.ic_launcher_round);
        mBuilder.setVibrate(null);
@@ -710,4 +709,57 @@ try {
 
     }
 
+
+
+    public static void playplaylistsong(String sngname)
+    {
+        try{
+
+            playbgmusic.player.stop();
+            musicplayer.songstate="playing";
+            musicplayer.porp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
+        threadinga.interrupt();
+        Cursor data2=mDatabaseHelper.getallsong();
+
+
+
+        while(data2.moveToNext()) {
+            if (sngname.equals(data2.getString(0))) {
+                String nextsongpath = data2.getString(1);
+                paths2 = nextsongpath;
+                Log.e("next", nextsongpath);
+                if (nextsongpath.contains("/storage/emulated/0")) {
+                    nextsongpath = nextsongpath.substring(nextsongpath.indexOf("/storage/emulated/0") + 19);
+                }
+
+                //setsong(nextsongpath);
+                paths = nextsongpath;
+                player = MediaPlayer.create(context, Uri.parse(Environment.getExternalStorageDirectory().getPath() + nextsongpath));
+                musicplayer.seekBar.setMax(player.getDuration());
+                String s = (player.getDuration() / 1000 / 60) + ":" + (player.getDuration() / 1000 % 60);
+                musicplayer.t2.setText(s);
+                getsongnamesinger();
+                player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        Log.e("gg", "Song over");
+                        playnextsong();
+
+
+                    }
+                });
+
+                player.start();
+                notificationpause(context);
+
+
+                ggwp();
+            }
+        }
+        }catch (CursorIndexOutOfBoundsException e)
+        {
+
+            Log.e("exception",e.toString());
+        }
+    }
 }
