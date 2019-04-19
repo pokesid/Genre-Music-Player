@@ -633,7 +633,7 @@ public class musicplayer extends AppCompatActivity {
        {
            playbgmusic.player.pause();
            songstate="paused";
-           porp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
+           porp.setBackgroundResource(R.drawable.pause);
 
            playbgmusic.notificationplay(musicplayer.this);
 
@@ -644,7 +644,7 @@ public class musicplayer extends AppCompatActivity {
             playbgmusic.player.start();
            // playnotif();
             songstate="playing";
-            porp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
+            porp.setBackgroundResource(R.drawable.play);
             playbgmusic.notificationpause(musicplayer.this);
 
         }
@@ -735,14 +735,14 @@ public  void playnotif()
     public void playnextsong(View view) {
         playbgmusic.player.stop();
         songstate="playing";
-        porp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
+        porp.setBackgroundResource(R.drawable.play);
         playbgmusic.playnextsong();
     }
 
     public void playprevioussong(View view) {
         playbgmusic.player.stop();
         songstate="playing";
-        porp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
+        porp.setBackgroundResource(R.drawable.play);
         playbgmusic.playprevioussong();
 
 

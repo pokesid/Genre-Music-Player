@@ -1,0 +1,233 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:2:1-49:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/464e41851fd6c626fcf50a6782549c4b/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/fc1315fb0c59baf6ed80d35168a92f03/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/417b4e55a830c035789df0c04953c933/AndroidManifest.xml:17:1-28:12
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/ada592e8d76c0b38a4cd8ca1fa686b4d/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/4cda0af24ee28d8863f8a535a6601f33/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/014bd8cb1af1235879983d0adef68010/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/44ee09ab671db61686fcddb31a691563/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/2558ad1e46cd479e9120c5562a115535/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/d34bf5ad43f3999c722219beff1c43b8/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/b7ae873b55a19f7f2b5a0b95eddf41d9/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/101422b42806465df477d6f06fe3a89b/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/1114acfcd9ed2c6adc5638880b8a13b9/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a499a6d75aa988b85568b41021060f26/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/0ed1ad5a6312921d360cbb2f6970baa1/AndroidManifest.xml:17:1-30:12
+INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:2:1-49:12
+	package
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:3:5-44
+		INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:2:1-49:12
+		INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:2:1-49:12
+		INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:5:5-80
+	android:name
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:5:22-77
+uses-permission#android.permission.MEDIA_CONTENT_CONTROL
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:6:5-80
+	android:name
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:6:22-77
+application
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:8:5-47:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/464e41851fd6c626fcf50a6782549c4b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/464e41851fd6c626fcf50a6782549c4b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/fc1315fb0c59baf6ed80d35168a92f03/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/fc1315fb0c59baf6ed80d35168a92f03/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/417b4e55a830c035789df0c04953c933/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/417b4e55a830c035789df0c04953c933/AndroidManifest.xml:22:5-26:19
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/ada592e8d76c0b38a4cd8ca1fa686b4d/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/ada592e8d76c0b38a4cd8ca1fa686b4d/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/4cda0af24ee28d8863f8a535a6601f33/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/4cda0af24ee28d8863f8a535a6601f33/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/014bd8cb1af1235879983d0adef68010/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/014bd8cb1af1235879983d0adef68010/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/44ee09ab671db61686fcddb31a691563/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/44ee09ab671db61686fcddb31a691563/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/2558ad1e46cd479e9120c5562a115535/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/2558ad1e46cd479e9120c5562a115535/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/d34bf5ad43f3999c722219beff1c43b8/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/d34bf5ad43f3999c722219beff1c43b8/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/b7ae873b55a19f7f2b5a0b95eddf41d9/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/b7ae873b55a19f7f2b5a0b95eddf41d9/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/101422b42806465df477d6f06fe3a89b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/101422b42806465df477d6f06fe3a89b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/1114acfcd9ed2c6adc5638880b8a13b9/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/1114acfcd9ed2c6adc5638880b8a13b9/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a499a6d75aa988b85568b41021060f26/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a499a6d75aa988b85568b41021060f26/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/0ed1ad5a6312921d360cbb2f6970baa1/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/0ed1ad5a6312921d360cbb2f6970baa1/AndroidManifest.xml:24:5-28:19
+	android:supportsRtl
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:11:9-41
+	android:roundIcon
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:12:9-54
+	android:icon
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:14:9-40
+activity#com.example.saidu.genreplayer.welcome
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:15:9-22:20
+	android:theme
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:16:13-56
+	android:name
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:15:19-42
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:17:13-21:29
+action#android.intent.action.MAIN
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:18:17-69
+	android:name
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:18:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:20:17-77
+	android:name
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:20:27-74
+service#com.example.saidu.genreplayer.mediaplayerservice
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:24:9-55
+	android:name
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:24:18-52
+service#com.example.saidu.genreplayer.playbgmusic
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:25:9-48
+	android:name
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:25:18-45
+activity#com.example.saidu.genreplayer.musicplayer
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:27:9-30:58
+	android:launchMode
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:29:13-44
+	android:theme
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:30:13-56
+	android:name
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:28:13-40
+receiver#com.example.saidu.genreplayer.NotificationBroadcast
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:32:9-40:20
+	android:name
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:32:19-56
+intent-filter#action:name:com.example.saidu.genreplayer.delete+action:name:com.example.saidu.genreplayer.next+action:name:com.example.saidu.genreplayer.pause+action:name:com.example.saidu.genreplayer.play+action:name:com.example.saidu.genreplayer.previous
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:33:13-39:29
+action#com.example.saidu.genreplayer.previous
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:34:17-81
+	android:name
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:34:25-78
+action#com.example.saidu.genreplayer.next
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:35:17-77
+	android:name
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:35:25-74
+action#com.example.saidu.genreplayer.play
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:36:17-77
+	android:name
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:36:25-74
+action#com.example.saidu.genreplayer.pause
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:37:17-78
+	android:name
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:37:25-75
+action#com.example.saidu.genreplayer.delete
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:38:17-79
+	android:name
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:38:25-76
+activity#com.example.saidu.genreplayer.MainActivity
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:42:9-44:15
+	android:theme
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:43:13-56
+	android:name
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:42:19-47
+activity#com.example.saidu.genreplayer.splashscreen
+ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:45:9-46:68
+	android:theme
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:46:13-56
+	android:name
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml:45:19-47
+uses-sdk
+INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml
+INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/464e41851fd6c626fcf50a6782549c4b/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/464e41851fd6c626fcf50a6782549c4b/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/fc1315fb0c59baf6ed80d35168a92f03/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/fc1315fb0c59baf6ed80d35168a92f03/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/417b4e55a830c035789df0c04953c933/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/417b4e55a830c035789df0c04953c933/AndroidManifest.xml:20:5-44
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/ada592e8d76c0b38a4cd8ca1fa686b4d/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/ada592e8d76c0b38a4cd8ca1fa686b4d/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/4cda0af24ee28d8863f8a535a6601f33/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/4cda0af24ee28d8863f8a535a6601f33/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/014bd8cb1af1235879983d0adef68010/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/014bd8cb1af1235879983d0adef68010/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/44ee09ab671db61686fcddb31a691563/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/44ee09ab671db61686fcddb31a691563/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/2558ad1e46cd479e9120c5562a115535/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/2558ad1e46cd479e9120c5562a115535/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/d34bf5ad43f3999c722219beff1c43b8/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/d34bf5ad43f3999c722219beff1c43b8/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/b7ae873b55a19f7f2b5a0b95eddf41d9/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/b7ae873b55a19f7f2b5a0b95eddf41d9/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/101422b42806465df477d6f06fe3a89b/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/101422b42806465df477d6f06fe3a89b/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/1114acfcd9ed2c6adc5638880b8a13b9/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/1114acfcd9ed2c6adc5638880b8a13b9/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a499a6d75aa988b85568b41021060f26/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a499a6d75aa988b85568b41021060f26/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/0ed1ad5a6312921d360cbb2f6970baa1/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/0ed1ad5a6312921d360cbb2f6970baa1/AndroidManifest.xml:20:5-22:41
+INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml
+INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/464e41851fd6c626fcf50a6782549c4b/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml
+		ADDED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/balajiar/AndroidStudioProjects/genreplayer2/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/464e41851fd6c626fcf50a6782549c4b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/417b4e55a830c035789df0c04953c933/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/417b4e55a830c035789df0c04953c933/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/4cda0af24ee28d8863f8a535a6601f33/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/4cda0af24ee28d8863f8a535a6601f33/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/014bd8cb1af1235879983d0adef68010/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/014bd8cb1af1235879983d0adef68010/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/44ee09ab671db61686fcddb31a691563/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/44ee09ab671db61686fcddb31a691563/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/2558ad1e46cd479e9120c5562a115535/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/2558ad1e46cd479e9120c5562a115535/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/d34bf5ad43f3999c722219beff1c43b8/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/d34bf5ad43f3999c722219beff1c43b8/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/b7ae873b55a19f7f2b5a0b95eddf41d9/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/b7ae873b55a19f7f2b5a0b95eddf41d9/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/101422b42806465df477d6f06fe3a89b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/101422b42806465df477d6f06fe3a89b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/1114acfcd9ed2c6adc5638880b8a13b9/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/1114acfcd9ed2c6adc5638880b8a13b9/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a499a6d75aa988b85568b41021060f26/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a499a6d75aa988b85568b41021060f26/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/464e41851fd6c626fcf50a6782549c4b/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.1.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/464e41851fd6c626fcf50a6782549c4b/AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/0ed1ad5a6312921d360cbb2f6970baa1/AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/0ed1ad5a6312921d360cbb2f6970baa1/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/balajiar/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/0ed1ad5a6312921d360cbb2f6970baa1/AndroidManifest.xml:26:13-58

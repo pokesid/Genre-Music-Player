@@ -65,13 +65,13 @@
                     android:layout_height="32dp"
                     android:layout_margin="5dp"
 
-                    android:background="@drawable/ic_pause_circle_outline_white"/>
+                    android:background="@drawable/play"/>
                 <Button
                     android:id="@+id/btnPlay"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:layout_margin="5dp"
-                    android:background="@drawable/ic_play_circle_outline_white"
+                    android:background="@drawable/pause"
                     android:visibility="gone"/>
                 <Button
                     android:id="@+id/btnNext"

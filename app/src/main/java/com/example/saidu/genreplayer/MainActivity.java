@@ -93,15 +93,15 @@ public  static Button btnporp;
         if(is_running==true) {
             playbgmusic.getsongnamesinger2();
             if (playbgmusic.player.isPlaying()) {
-                btnporp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
+                btnporp.setBackgroundResource(R.drawable.play);
 
             } else {
-                btnporp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
+                btnporp.setBackgroundResource(R.drawable.pause);
             }
         }
         else
         {
-            btnporp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
+            btnporp.setBackgroundResource(R.drawable.pause);
         }
     }
 
@@ -281,7 +281,7 @@ catch (Exception e)
 
                 } else {
                     musicplayer.songstate = "paused";
-                    musicplayer.porp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
+                    musicplayer.porp.setBackgroundResource(R.drawable.pause);
                 }
             } else {
 
@@ -296,22 +296,22 @@ catch (Exception e)
                 if (playbgmusic.player.isPlaying()) {
 
                     musicplayer.songstate = "paused";
-                    musicplayer.porp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
+                    musicplayer.porp.setBackgroundResource(R.drawable.pause);
                     playbgmusic.notificationplay(MainActivity.this);
 
 
                     playbgmusic.player.pause();
-                    btnporp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
+                    btnporp.setBackgroundResource(R.drawable.pause);
 
 
                 } else {
                     playbgmusic.player.start();
 
                     musicplayer.songstate = "playing";
-                    musicplayer.porp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
+                    musicplayer.porp.setBackgroundResource(R.drawable.play);
                     playbgmusic.notificationpause(MainActivity.this);
 
-                    btnporp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
+                    btnporp.setBackgroundResource(R.drawable.play);
                 }
             } else {
 
@@ -328,7 +328,7 @@ catch (Exception e)
 
             playbgmusic.player.stop();
             musicplayer.songstate="playing";
-            musicplayer.porp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
+            musicplayer.porp.setBackgroundResource(R.drawable.play);
             playbgmusic.playnextsong();
         }
 
@@ -352,7 +352,7 @@ catch (Exception e)
 
             playbgmusic.player.stop();
             musicplayer.songstate="playing";
-            musicplayer.porp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
+            musicplayer.porp.setBackgroundResource(R.drawable.play);
             playbgmusic.playprevioussong();
         }
 

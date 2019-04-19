@@ -717,7 +717,7 @@ try {
 
             playbgmusic.player.stop();
             musicplayer.songstate="playing";
-            musicplayer.porp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
+            musicplayer.porp.setBackgroundResource(R.drawable.play);
         threadinga.interrupt();
         Cursor data2=mDatabaseHelper.getallsong();
 

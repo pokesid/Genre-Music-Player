@@ -4,83 +4,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background2"
+    android:background="@drawable/backgroundt2"
     tools:context="com.example.saidu.genreplayer.musicplayer">
 
+    <View
+            android:id="@+id/opacityFilter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:alpha="0.70" android:layout_alignParentStart="true" android:layout_alignParentTop="true"
+    >
+    </View>
+
+
     <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/button3"
-        android:layout_marginBottom="81dp" />
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/button3"
+            android:progressTint="@android:color/white"
+            android:thumbTint="@android:color/white"
+            android:progressBackgroundTint="@android:color/white"
+            android:layout_marginBottom="90dp" android:layout_marginLeft="10dp" android:layout_marginRight="15dp"
+            android:paddingBottom="15dp"/>
 
     <Button
-        android:id="@+id/playorpause"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/timeend"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="10dp"
+            android:id="@+id/playorpause"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/timeend"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/play"
+            android:onClick="notif"/>
 
-        android:layout_marginTop="2dp"
-        android:background="@drawable/ic_pause_circle_outline_white"
-        android:onClick="notif" />
-
-    <TextView
-        android:id="@+id/timestart"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/seekBar"
-        android:layout_marginLeft="5dp"
-
-        android:layout_marginTop="19dp"
-        android:textColor="#fff" />
 
     <TextView
-        android:id="@+id/timeend"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:textColor="#fff"
-        android:layout_alignTop="@+id/timestart" />
+            android:id="@+id/timestart"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/seekBar"
+            android:layout_marginLeft="15dp"
+
+            android:layout_marginTop="19dp"
+            android:textColor="#fff"/>
+
+    <TextView
+            android:id="@+id/timeend"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textColor="#fff"
+            android:layout_alignTop="@+id/timestart" android:layout_marginRight="15dp"
+    />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignTop="@+id/playorpause"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="2dp"
-        android:layout_toEndOf="@+id/playorpause"
-        android:background="@drawable/ic_skip_next_white"
-        android:onClick="playnextsong" />
+            android:id="@+id/button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignTop="@+id/playorpause"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/playorpause"
+            android:background="@drawable/next"
+            android:onClick="playnextsong"/>
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignTop="@+id/playorpause"
-        android:layout_marginEnd="19dp"
-        android:layout_marginTop="2dp"
-        android:layout_toStartOf="@+id/playorpause"
-        android:background="@drawable/ic_skip_previous_white"
-        android:onClick="playprevioussong" />
+            android:id="@+id/button2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignTop="@+id/playorpause"
+            android:layout_marginEnd="19dp"
+            android:layout_marginTop="2dp"
+            android:layout_toStartOf="@+id/playorpause"
+            android:background="@drawable/prev"
+            android:onClick="playprevioussong"/>
 
     <TextView
-        android:id="@+id/sngname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/song_image"
-        android:layout_marginTop="18dp"
-        android:gravity="center"
-        android:text="song name"
-        android:textColor="#fff"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
+            android:id="@+id/sngname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/song_image"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:text="song name"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
     <TextView
         android:id="@+id/sngsinger"
         android:layout_width="match_parent"
@@ -103,13 +117,13 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/viewgenrebut"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_above="@+id/timestart"
-        android:layout_alignEnd="@+id/songcount"
-        android:background="@drawable/genre"
-        android:textColor="#fff" />
+            android:id="@+id/viewgenrebut"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/timestart"
+            android:layout_alignEnd="@+id/songcount"
+            android:background="@drawable/genre"
+            android:textColor="#fff" android:layout_marginBottom="10dp" android:layout_marginRight="20dp"/>
 
 
     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -134,24 +148,24 @@
         android:layout_below="@+id/sngsinger" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/timeend"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/setings"
-        android:onClick="settings"
-        android:paddingTop="10dp" />
+            android:id="@+id/button5"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/timeend"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/settings"
+            android:onClick="settings"
+            android:layout_alignParentEnd="false" android:layout_alignParentTop="false"
+            android:layout_alignParentStart="false" android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"/>
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignStart="@+id/timestart"
-        android:layout_below="@+id/timestart"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/plist"
-        android:onClick="playlist" />
+            android:id="@+id/button3"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignStart="@+id/timestart"
+            android:layout_below="@+id/timestart"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/plist"
+            android:onClick="playlist" android:layout_alignParentStart="false"/>
 </RelativeLayout>

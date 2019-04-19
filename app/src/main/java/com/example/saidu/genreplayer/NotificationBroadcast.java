@@ -25,10 +25,10 @@ public class NotificationBroadcast extends BroadcastReceiver {
         {
            if(playbgmusic.player.isPlaying()){
                playbgmusic.player.pause();
-              musicplayer.porp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
+              musicplayer.porp.setBackgroundResource(R.drawable.pause);
               playbgmusic.notificationplay(context);
-               MainActivity.btnporp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
-              /* mBuilder.getBigContentView().setImageViewResource(R.id.btnPause, R.drawable.ic_play_circle_outline_white);
+               MainActivity.btnporp.setBackgroundResource(R.drawable.pause);
+              /* mBuilder.getBigContentView().setImageViewResource(R.id.btnPause, R.drawable.pause);
 
                musicplayer.mBuilder.setCustomBigContentView(musicplayer.expandedView);
               // musicplayer.mNotificationManager.notify(1, musicplayer.mBuilder.build());
@@ -36,10 +36,10 @@ public class NotificationBroadcast extends BroadcastReceiver {
            }
            else
            {
-               musicplayer.porp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
+               musicplayer.porp.setBackgroundResource(R.drawable.play);
                playbgmusic.player.start();
                playbgmusic.notificationpause(context);
-               MainActivity.btnporp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
+               MainActivity.btnporp.setBackgroundResource(R.drawable.play);
            }
         }
         else if(intent.getAction().equals(musicplayer.NOTIFY_DELETE))
@@ -48,8 +48,8 @@ public class NotificationBroadcast extends BroadcastReceiver {
             playbgmusic.mNotificationManager.cancel(1);
             if(playbgmusic.player.isPlaying()){
                 playbgmusic.player.pause();
-                musicplayer.porp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
-                MainActivity.btnporp.setBackgroundResource(R.drawable.ic_play_circle_outline_white);
+                musicplayer.porp.setBackgroundResource(R.drawable.pause);
+                MainActivity.btnporp.setBackgroundResource(R.drawable.pause);
                 musicplayer.songstate="paused";
             }
           //  Toast.makeText(context,"delete",Toast.LENGTH_SHORT).show();
@@ -58,7 +58,7 @@ public class NotificationBroadcast extends BroadcastReceiver {
         {
             playbgmusic.player.stop();
             playbgmusic.playnextsong();
-            musicplayer.porp.setBackgroundResource(R.drawable.ic_pause_circle_outline_white);
+            musicplayer.porp.setBackgroundResource(R.drawable.play);
             musicplayer.songstate="paused";
             //Toast.makeText(context,"next",Toast.LENGTH_SHORT).show();
         }
