@@ -71,6 +71,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
               {
 
               }
+          catch (Exception ignore)
+          {
+
+          }
           if (result == -1) {
               return false;
           } else {

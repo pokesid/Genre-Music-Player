@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/balajiar/AndroidStudioProjects/genreplayer2/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
+            "outputFile": "D:\\AndroidStudioProjects\\genreplayer\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
             "map": [
                 {
-                    "source": "/Users/balajiar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/464e41851fd6c626fcf50a6782549c4b/res/values-v22/values-v22.xml",
+                    "source": "C:\\Users\\siddharth\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\5ef141bb5d70f5efbfd5323e51ebb84f\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

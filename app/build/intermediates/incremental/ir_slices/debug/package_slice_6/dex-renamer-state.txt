@@ -1,4 +1,4 @@
-#Fri Apr 19 15:58:09 IST 2019
-base.0=/Users/balajiar/AndroidStudioProjects/genreplayer2/app/build/intermediates/transforms/dexMerger/debug/6
+#Sat Apr 20 10:33:38 IST 2019
+base.0=D\:\\AndroidStudioProjects\\genreplayer\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
 path.0=classes.dex
 renamed.0=classes.dex

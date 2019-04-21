@@ -64,49 +64,49 @@ public class splashscreen extends AppCompatActivity {
     }
     public void dostuff()
     {
+try {
+    Animation myanim = AnimationUtils.loadAnimation(this, R.anim.mytransition);
+    // tvsplash.startAnimation(myanim);
+    // ivsplash.startAnimation(myanim);
+    ContentResolver contentResolver = getContentResolver();
+    Uri songUri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
+    Cursor songCursor = contentResolver.query(songUri, null, null, null, null);
 
-        Animation myanim = AnimationUtils.loadAnimation(this, R.anim.mytransition);
-       // tvsplash.startAnimation(myanim);
-       // ivsplash.startAnimation(myanim);
-        ContentResolver contentResolver=getContentResolver();
-        Uri songUri= MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
-        Cursor songCursor=contentResolver.query(songUri,null,null,null,null);
+    if (songCursor != null && songCursor.moveToFirst()) {
+        int songTitle = songCursor.getColumnIndex(MediaStore.Audio.Media.TITLE);
+        int songArtist = songCursor.getColumnIndex(MediaStore.Audio.Media.ARTIST);
+        int songPath = songCursor.getColumnIndex(MediaStore.Audio.Media.DATA);
+        int songPath2 = songCursor.getColumnIndex(MediaStore.MediaColumns.DATA);
+        //  Toast.makeText(getApplicationContext(),songpath2,Toast.LENGTH_SHORT).show();
 
-        if(songCursor !=null && songCursor.moveToFirst())
-        {
-            int songTitle=songCursor.getColumnIndex(MediaStore.Audio.Media.TITLE);
-            int songArtist=songCursor.getColumnIndex(MediaStore.Audio.Media.ARTIST);
-            int songPath=songCursor.getColumnIndex(MediaStore.Audio.Media.DATA);
-            int songPath2=songCursor.getColumnIndex(MediaStore.MediaColumns.DATA);
-            //  Toast.makeText(getApplicationContext(),songpath2,Toast.LENGTH_SHORT).show();
-
-            do{
-                try {
-                    String currentTitle = songCursor.getString(songTitle);
-                    String currentArtist = songCursor.getString(songArtist);
-                    //String Path=songCursor.getString(songPath);
-                    String Path2 = songCursor.getString(songPath2);
-                    boolean insertdata = mDatabaseHelper.adddata(currentTitle, Path2, currentArtist);
-                    if (insertdata) {
-                       // Toast.makeText(getApplicationContext(), "vetrii", Toast.LENGTH_SHORT).show();
-                        Log.d("HG", "success");
-                    } else {
-                        Log.d("HG", "fail");
-                    }
-
+        do {
+            try {
+                String currentTitle = songCursor.getString(songTitle);
+                String currentArtist = songCursor.getString(songArtist);
+                //String Path=songCursor.getString(songPath);
+                String Path2 = songCursor.getString(songPath2);
+                boolean insertdata = mDatabaseHelper.adddata(currentTitle, Path2, currentArtist);
+                if (insertdata) {
+                    // Toast.makeText(getApplicationContext(), "vetrii", Toast.LENGTH_SHORT).show();
+                    Log.d("HG", "success");
+                } else {
+                    Log.d("HG", "fail");
                 }
-                catch (Exception e)
-                {
 
-                }
-            }while(songCursor.moveToNext());
-            final Intent i = new Intent(this, MainActivity.class);
-            startActivity(i);
-            overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
-            finish();
-        }
+            } catch (Exception e) {
 
+            }
+        } while (songCursor.moveToNext());
+        final Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+        finish();
+    }
 
+}catch(Exception e)
+{
+
+}
     }
     @Override
     public void onRequestPermissionsResult(int requestCode,  String[] permissions,  int[] grantResults) {

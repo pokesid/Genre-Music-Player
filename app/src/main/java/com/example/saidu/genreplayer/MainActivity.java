@@ -17,12 +17,17 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -48,6 +53,8 @@ RelativeLayout llay;
 public  static Button btnporp;
     RecyclerView recyclerView;
     static Context ctxx;
+    EditText searchbox;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +67,22 @@ public  static Button btnporp;
         textsongname=(TextView)findViewById(R.id.textsongname);
         recyclerView = (RecyclerView) findViewById(R.id.recycleview);
         ctxx=MainActivity.this;
+        searchbox = (EditText) findViewById(R.id.searchbox);
+        searchbox.addTextChangedListener(new TextWatcher() {
+
+            public void afterTextChanged(Editable s) {
+            }
+
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+                runAnimation(recyclerView,0);
+            }
+        });
+
     if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED)
     {
         if(ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.READ_EXTERNAL_STORAGE))
@@ -153,8 +176,36 @@ catch (Exception e)
         if(type==0)
             controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_fall_down);
 
+       // Toast.makeText(getApplicationContext(),"gg",Toast.LENGTH_SHORT).show();
+        ArrayList<String> temp_arraylist=new ArrayList<>();
 
-        SimpleRecyclerAdapter simpleRecyclerAdapter = new SimpleRecyclerAdapter(arrayList2,MainActivity.this);
+        if(searchbox.getText().toString().length()>0)
+        {
+
+           String search= searchbox.getText().toString();
+
+           for(String each_value:arrayList2)
+           {
+
+               String each_part[]=each_value.split("---");
+               if(each_part[0].toLowerCase().contains(search.toLowerCase()))
+               {
+                   Log.d(search,each_part[0]);
+                   temp_arraylist.add(each_value);
+               }
+
+           }
+
+
+
+
+        }
+        else
+        {
+            temp_arraylist=arrayList2;
+        }
+
+        SimpleRecyclerAdapter simpleRecyclerAdapter = new SimpleRecyclerAdapter(temp_arraylist,MainActivity.this);
         recyclerView.setAdapter(simpleRecyclerAdapter);
 
         recyclerView.setLayoutAnimation(controller);
@@ -162,6 +213,8 @@ catch (Exception e)
         recyclerView.scheduleLayoutAnimation();
 
     }
+
+
     public void dostuff()
     {
         listView=(ListView)findViewById(R.id.listView);
@@ -417,4 +470,10 @@ catch (Exception e)
     }
 
 
+    public void showsearch(View view) {
+
+        searchbox.requestFocus();
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.showSoftInput(searchbox, InputMethodManager.SHOW_IMPLICIT);
+    }
 }
